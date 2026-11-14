@@ -1,13 +1,16 @@
 # Gepotidacin vs Nitrofurantoin A/B Test Analysis  
 ### EAGLE-2 & EAGLE-3 Phase 3 Trials
 
+
+[View Executive Summary](visuals/Executive_Summary.png)
+
 *Last updated: November 2026*
 
 ---
 
 ## Summary
 
-This project analyses the results of two phase 3 randomised controlled trials (EAGLE-2 and EAGLE-3) that compared a new antibiotic, **gepotidacin**, with the current standard treatment, **nitrofurantoin**, in women with uncomplicated urinary tract infections (UTIs).
+This project re-analyses the results of two phase 3 randomised controlled trials (EAGLE-2 and EAGLE-3) that compared a new antibiotic, **gepotidacin**, with the current standard treatment, **nitrofurantoin**, in women with uncomplicated urinary tract infections (UTIs).
 
 Using two-proportion tests and confidence intervals, the analysis shows that gepotidacin was non-inferior to nitrofurantoin in both trials and superior in EAGLE-3.
 
@@ -24,7 +27,7 @@ This project connects to my previous work on *E. coli* resistance to third-gener
 ## Research Questions
 
 1. Is there a statistically significant difference in therapeutic success rates between gepotidacin and nitrofurantoin?
-2. Can gepotidacin be considered non-inferior to nitrofurantoin (using a 10% non-inferiority margin)?
+2. Can gepotidacin be considered non-inferior and/or superior to nitrofurantoin? (using a 10% non-inferiority margin and zero mark) respectively
 3. How do the results of EAGLE-2 and EAGLE-3 compare?
 
 ---
@@ -50,17 +53,18 @@ Data were extracted from the published results of the EAGLE-2 (NCT04020341) and 
 - Computed the difference in proportions  
 - Performed two-proportion z-tests  
 - Calculated 95% confidence intervals for the differences  
-- Assessed non-inferiority using a pre-specified 10% margin  
+- Assessed non-inferiority using a pre-specified 10% margin 
+- Assessed superiority using the zero mark 
 - Compared unadjusted results with the adjusted results published in the paper  
 
 ---
 
 ## Key Results
 
-| Trial    | Difference (Gep – Nitro) | 95% CI            | Non-inferior? | Superior? |
-|----------|---------------------------|-------------------|---------------|---------|
-| EAGLE-2  | +3.6% (unadjusted)        | Approx. –4% to 12% | Yes           | No      |
-| EAGLE-3  | +14.9% (unadjusted)       | Approx. +7% to 23% | Yes           | Yes     |
+| Trial    | Difference (Gep – Nitro) | 95% CI            | Non-inferior? | Superior? | p  |
+|----------|---------------------------|-------------------|---------------|---------|-------|
+| EAGLE-2  | +3.6% (unadjusted)        | Approx. –4% to 12% | Yes           | No      | 37.75% |
+| EAGLE-3  | +14.9% (unadjusted)       | Approx. +7% to 23% | Yes           | Yes     | 0.05% |
 
 Published adjusted differences:  
 - EAGLE-2: +4.3% (95% CI –3.6% to 12.1%)  
@@ -72,7 +76,7 @@ Published adjusted differences:
 
 - Both trials were **stopped early for efficacy** after a pre-planned interim analysis.  
 - The published results are **adjusted** for baseline characteristics, while the calculations in this repository are **unadjusted**.  
-- Early stopping can lead to slightly overestimated treatment effects.
+- Early stopping can lead to overestimated treatment effects.
 
 ---
 

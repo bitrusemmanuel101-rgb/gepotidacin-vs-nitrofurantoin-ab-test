@@ -1,0 +1,6 @@
+jupyter
+python
+pandas
+numpy
+scipy
+statsmodels
